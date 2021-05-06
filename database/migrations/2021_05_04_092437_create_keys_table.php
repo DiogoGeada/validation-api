@@ -13,11 +13,11 @@ class CreateKeysTable extends Migration
      */
     public function up()
     {
-        Schema::create('keys', function (Blueprint $table) {
+        Schema::create('activation_keys', function (Blueprint $table) {
             $table->id();
-            $table->string('activation_key')->length(255)->unique()->nullable(false);
+            $table->string('key')->length(11)->unique();
             $table->timestamps();
-            $table->datetime('activation_date')->default(null);
+            $table->datetime('activation_date')->nullable(true)->default(null);
             $table->foreignId('user_id')->references('id')->on('users');
         });
     }
