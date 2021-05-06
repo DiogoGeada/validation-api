@@ -2,17 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
-class ActivationController extends Controller
+class Controller extends BaseController
 {
-    
-    public function activate(Request $request){
-
-        $email = $request->input('key');
-        $key = $request->input('key');
-
-    }
-
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
