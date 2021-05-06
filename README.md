@@ -9,22 +9,26 @@
 
 ## Getting started
 
-To setp the api up and running, start by creating a mysql database. Edit the file /config/database.php to suit your database connection details.
-After database is setup run `php artisan migrate` to finish setting up database.
+Clone the repository and run `composer install` to install all the project dependencies.
 
-To populate the database in a quick way for testing, run `php artisan db:seed`.
+Then, to set the api up and running, start by creating a mysql database. Edit the file /config/database.php to suit your database connection details.
+After database is setup, run `php artisan migrate` to finish setting up database.
+
+To populate the database for testing, run `php artisan db:seed`.
 
 To start the server, run `php artisan serve`.
 
-After everything is done, you should be able to do calls to the api
+After everything is done, you should be able to make requests to the api.
 
 ## Endpoints
 
-\[POST\] 127.0.0.1:8000/api/key/activate
+\[POST\] /api/key/activate
+```
     body: {
-        email: '[user email]',
-        key: '[user activation key]'
+        email: '[user_email]',
+        key: '[user_activation_key]'
     }
+```
 
 
 ## License
