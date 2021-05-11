@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ActivationController;
+use App\Http\Controllers\KeyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +15,5 @@ use App\Http\Controllers\ActivationController;
 |
 */
 
-Route::post('/key/activate', [ActivationController::class, 'Activate']);
+Route::post('/key/activate', [KeyController::class, 'Activate']);
+Route::post('/key/check', [KeyController::class, 'Check']);
