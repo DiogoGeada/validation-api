@@ -29,7 +29,12 @@ After everything is done, you should be able to make requests to the api.
         key: '[user_activation_key]'
     }
 ```
-
+\[POST\] /api/key/check
+```
+    body: {
+        key: '[user_activation_key]'
+    }
+```
 
 ## License
 
