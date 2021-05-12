@@ -5,5 +5,5 @@ deployment:
     - /bin/cp -r * $DEPLOYPATH
     - /bin/cp -r /public/* /home/diogogeadavcloud/validation
     - cd $DEPLOYPATH
-    - /bin/rm -r /public
-    - /bin/rm -r /.git
+    - /bin/rm -r public
+    - /bin/rm -r .git
