@@ -21,7 +21,7 @@ class KeyController extends Controller
         $user_id = User::where('email', '=', $email)->first();
 
         if($user_id == null){
-            return response($this->formatResponse('user_not_found'),200, ['Content-type => application/json']);
+            return response($this->formatResponse('user_not_found'),200, ['Content-type' => 'application/json']);
         }
 
         $activationKey = ActivationKey::where([
@@ -30,15 +30,15 @@ class KeyController extends Controller
             ])->first();
 
         if($activationKey == null){
-            return response($this->formatResponse('invalid_key'),200, ['Content-type => application/json']);
+            return response($this->formatResponse('invalid_key'),200, ['Content-type' => 'application/json']);
         } else if($activationKey->activation_date != null){
-            return response($this->formatResponse('used_key'), 200, ['Content-type => application/json']);
+            return response($this->formatResponse('used_key'), 200, ['Content-type' => 'application/json']);
         }
 
         $activationKey->activation_date = date('Y-m-d H:i:s');;
         $activationKey->save();
 
-        return response($this->formatResponse('successfull_validation'), 200, ['Content-type => application/json']);
+        return response($this->formatResponse('successfull_validation'), 200, ['Content-type' => 'application/json']);
     }
 
     public function Check(Request $request){
@@ -49,11 +49,11 @@ class KeyController extends Controller
         ])->first();
 
         if($activationKey == null){
-            return response($this->formatResponse('invalid_key'),200, ['Content-type => application/json']);
+            return response($this->formatResponse('invalid_key'),200, ['Content-type' => 'application/json']);
         } elseif($activationKey->activation_date == null){
-            return response($this->formatResponse('inactive_key'), 200, ['Content-type => application/json']);
+            return response($this->formatResponse('inactive_key'), 200, ['Content-type' => 'application/json']);
         }
-        return response($this->formatResponse('active_key'),200, ['Content-type => application/json']);
+        return response($this->formatResponse('active_key'),200, ['Content-type' => 'application/json']);
     }
 
 
