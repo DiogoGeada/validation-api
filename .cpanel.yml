@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/diogogeadavcloud/public_html/solutions/validation/
-    - /bin/cp -a * $DEPLOYPATH
+    - /bin/cp -R ./ $DEPLOYPATH
