@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});*/
+Route::post('/key/activate', [KeyController::class, 'Activate']);
+Route::post('/key/check', [KeyController::class, 'Check']);
