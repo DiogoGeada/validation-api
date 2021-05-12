@@ -23,16 +23,18 @@ After everything is done, you should be able to make requests to the api.
 ## Endpoints
 
 \[POST\] /api/key/activate
+### Body
 ```
-    body: {
-        email: '[user_email]',
-        key: '[user_activation_key]'
+    {
+        "email": "[user_email]",
+        "key": "[user_activation_key]"
     }
 ```
 \[POST\] /api/key/check
+### Body
 ```
-    body: {
-        key: '[user_activation_key]'
+    {
+        "key": "[user_activation_key]"
     }
 ```
 
