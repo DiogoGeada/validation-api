@@ -1,8 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/diogogeadavcloud/validation/
+    - export DEPLOYPATH=/home/diogogeadavcloud/validation
     - /bin/cp -r * $DEPLOYPATH
-    - /bin/cp -r public/* /home/diogogeadavcloud/public_htmlvalidation
+    - /bin/cp -r ./public/* /home/diogogeadavcloud/public_html/validation
     - /bin/rm -r $DEPLOYPATH/public
     - /bin/rm -r $DEPLOYPATH/.git
