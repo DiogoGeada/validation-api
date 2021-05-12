@@ -16,8 +16,4 @@ use App\Http\Controllers\KeyController;
 */
 
 Route::post('/key/activate', [KeyController::class, 'Activate']);
-<<<<<<< HEAD
 Route::post('/key/check', [KeyController::class, 'Check']);
-=======
-Route::post('/key/check', [KeyController::class, 'Check']);
->>>>>>> main
