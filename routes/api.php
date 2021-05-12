@@ -15,7 +15,7 @@ use App\Http\Controllers\KeyController;
 |
 */
 
-Route::middleware(['cors'])->group(function(){
+Route::middleware(['api'])->group(function(){
     Route::post('/key/activate', [KeyController::class, 'Activate']);
     Route::post('/key/check', [KeyController::class, 'Check']);
 });
