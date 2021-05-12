@@ -4,6 +4,7 @@ deployment:
     - export DEPLOYPATH=/home/diogogeadavcloud/validation
     - /bin/cp -r * $DEPLOYPATH
     - /bin/cp -r ./.htaccess $DEPLOYPATH
+    - /bin/cp -r ./.env $DEPLOYPATH
     - /bin/cp -r ./public/* /home/diogogeadavcloud/public_html/validation
     - /bin/cp -r ./public/.htaccess /home/diogogeadavcloud/public_html/validation
     - /bin/rm -r $DEPLOYPATH/public
