@@ -8,7 +8,7 @@ deployment:
     - /bin/cp -r ./public/.htaccess /home/diogogeadavcloud/public_html/validation
     - /bin/rm -r $DEPLOYPATH/public
     - /bin/rm -r $DEPLOYPATH/.git
-    - /bin/rm -r $DEPLOYPATH/README.md
-    - /bin/rm -r $DEPLOYPATH/.gitignore
-    - /bin/rm -r $DEPLOYPATH/.gitattributes
-    - /bin/rm -r $DEPLOYPATH/.cpanel.yml
+    - /bin/rm $DEPLOYPATH/README.md
+    - /bin/rm $DEPLOYPATH/.gitignore
+    - /bin/rm $DEPLOYPATH/.gitattributes
+    - /bin/rm $DEPLOYPATH/.cpanel.yml
