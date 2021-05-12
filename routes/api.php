@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KeyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/key/activate', [KeyController::class, 'Activate']);
+<<<<<<< HEAD
 Route::post('/key/check', [KeyController::class, 'Check']);
+=======
+Route::post('/key/check', [KeyController::class, 'Check']);
+>>>>>>> main
